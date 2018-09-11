@@ -1,24 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="match_parent" android:layout_height="match_parent"
     android:layout_margin="10dp">
-
     <TextView
         android:id="@+id/nomeTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:text="Nome"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="true"/>
 
     <EditText
         android:id="@+id/nomeEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:layout_below="@+id/nomeTextView"
-        />
+        android:layout_below="@id/nomeTextView"/>
 
     <TextView
         android:id="@+id/emailTextView"
@@ -26,15 +23,14 @@
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:text="E-mail"
-        android:layout_below="@+id/nomeEditText"/>
+        android:layout_below="@id/nomeEditText"/>
 
     <EditText
         android:id="@+id/emailEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
-        android:layout_below="@+id/emailTextView"
-        />
+        android:layout_below="@id/emailTextView"/>
 
     <TextView
         android:id="@+id/telefoneTextView"
@@ -42,35 +38,33 @@
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:text="Telefone"
-        android:layout_below="@+id/emailEditText"/>
+        android:layout_below="@id/emailEditText"/>
 
     <EditText
         android:id="@+id/telefoneEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="phone"
-        android:layout_below="@+id/telefoneTextView"
-        />
+        android:inputType="text"
+        android:layout_below="@id/telefoneTextView"/>
 
     <CheckBox
         android:id="@+id/notificacoesCheckBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Recebe Notificações"
-        android:layout_below="@+id/telefoneEditText" />
+        android:text="Receber notificações"
+        android:layout_below="@id/telefoneEditText"/>
 
     <RadioGroup
-        android:id="@+id/notificacoesRadioGoup"
+        android:id="@+id/notificacoesRadioGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:layout_below="@+id/notificacoesCheckBox">
+        android:layout_below="@id/notificacoesCheckBox"
+        android:visibility="gone">
         <RadioButton
             android:id="@+id/emailRadioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="E-mail"/>
-
         <RadioButton
             android:id="@+id/telefoneRadioButton"
             android:layout_width="match_parent"
@@ -80,19 +74,18 @@
 
     <Button
         android:id="@+id/limparButton"
-        android:text="Limpar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Limpar"
         android:onClick="limparFormulario"
-        android:layout_below="@+id/notificacoesRadioGoup"
-        />
+        android:layout_below="@id/notificacoesRadioGroup"/>
 
     <Button
         android:id="@+id/salvarButton"
-        android:text="Salvar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/notificacoesRadioGoup"
-        android:layout_toRightOf="@+id/limparButton"
-        />
+        android:text="Salvar"
+        android:layout_toRightOf="@id/limparButton"
+        android:layout_below="@id/notificacoesRadioGroup"/>
+
 </RelativeLayout>
